@@ -83,7 +83,7 @@ functions:
           path: billing
           method: post
           cors: true
-          authorizer: aws_aim
+          authorizer: aws_iam
 
 resource:
   - ${file(resources/api-gateway-errors.yml)}
