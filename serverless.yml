@@ -81,7 +81,7 @@ functions:
     events:
       - http:
           path: billing
-          method: posts
+          method: post
           cors: true
           authorizer: aws_aim
 
