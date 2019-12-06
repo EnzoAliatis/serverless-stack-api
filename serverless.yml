@@ -22,6 +22,7 @@ provider:
   #
   environment:
     tableName: notes
+    stripeSecretKey: ${env:STRIPE_SECRET_KEY}
 
   iamRoleStatements:
     - Effect: Allow
@@ -35,12 +36,6 @@ provider:
       Resource: 'arn:aws:dynamodb:us-east-1:*:*'
 
 functions:
-  hello:
-    handler: handler.hello
-    events:
-      - http:
-          path: hello
-          method: get
   create:
     handler: create.main
     events:
@@ -81,6 +76,14 @@ functions:
           method: delete
           cors: true
           authorizer: aws_iam
-          
-  
+  billing:
+    handler: billing.main
+    events:
+      - http:
+          path: billing
+          method: posts
+          cors: true
+          authorizer: aws_aim
 
+resource:
+  - ${file(resources/api-gateway-errors.yml)}
