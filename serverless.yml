@@ -32,7 +32,8 @@ provider:
         - dynamodb:Scan
         - dynamodb:GetItem
         - dynamodb:PutItem
-        - dynamodn:DeleteItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
       Resource: 'arn:aws:dynamodb:us-east-1:*:*'
 
 functions:

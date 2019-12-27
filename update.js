@@ -20,6 +20,6 @@ export async function main(event, context) {
     await dynamoDbLib.call('update', params);
     return success({ status: true });
   } catch (error) {
-    return failture({ status: false });
+    return failture({ status: false, error: error });
   }
 }

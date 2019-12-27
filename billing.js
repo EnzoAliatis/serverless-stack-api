@@ -8,7 +8,7 @@ export async function main(event, context) {
   const amount = calculateCost(storage);
   const description = 'Scratch charge';
 
-  const stripe = stripePackage(process.env.stripeScretKey);
+  const stripe = stripePackage(process.env.STRIPE_SECRET_KEY);
 
   try {
     await stripe.charges.create({
