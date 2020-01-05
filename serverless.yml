@@ -1,4 +1,4 @@
-NotesTableservice: notes-app-2-api
+service: notes-app-2-api
 
 # Create an optimized package for our functions
 package:
