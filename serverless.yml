@@ -54,7 +54,7 @@ functions:
     handler: hi.main
     events:
       - http:
-          path: /
+          path: hi
           method: get
           cors: true
   create:
