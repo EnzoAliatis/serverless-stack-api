@@ -50,6 +50,13 @@ functions:
   # - cors: enabled CORS (Cross-Origin Resource Sharing) for browser cross
   #     domain api call
   # - authorizer: authenticate using the AWS IAM role
+  hi:
+    handler: hi.main
+    events:
+      - http:
+          path: /
+          method: get
+          cors: true
   create:
     handler: create.main
     events:
