@@ -57,7 +57,6 @@ functions:
           path: /
           method: get
           cors: true
-          authorizer: none
   create:
     handler: create.main
     events:
