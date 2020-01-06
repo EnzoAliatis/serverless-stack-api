@@ -1,4 +1,5 @@
+import { success } from './libs/response-lib';
 
-export function main(event, context) {
-  return { message: 'Hola con todos'};
+export async function main(event, context) {
+  return success('hola con todos');
 }
